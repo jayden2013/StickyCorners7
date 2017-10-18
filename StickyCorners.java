@@ -77,10 +77,19 @@ public class StickyCorners {
 			}
 			
 		});
+		
+		JButton exitCompletely = new JButton("Exit Program");
+		exitCompletely.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				System.exit(0);
+			}
+		});
+		
 		panel1.setLayout(new BoxLayout(panel1, BoxLayout.Y_AXIS));
 		panel1.add(topRightHandCorner);
 		panel1.add(bottomRightHandCorner);
 		panel1.add(saveSettings);
+		panel1.add(exitCompletely);
 		
 		//Panel 2 Content
 		JPanel panel2 = new JPanel();
